@@ -1,0 +1,63 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tableContainer{
+    display: flex;
+    justify-content: center;
+}
+table{
+    border: 2px solid black
+}
+td{
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40px;
+    height: 40px;
+    background-color: blanchedalmond;
+}
+.leftBorder{
+    border-left: 2px solid black;
+}
+.topBorder{
+    border-top: 2px solid black;
+}
+.container{
+    display: flex;
+    justify-content: center;
+
+}
+p{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+    padding:10px; 
+    margin:30px 5px 50px 5px;     
+    background-color: gray;
+}
+
+span{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+    padding:10px; 
+    margin:30px 5px 50px 5px;     
+    background-color: gray;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+}
+button{
+    width:250px;
+    height:50px;
+    border-radius: 10px;
+    color:white;
+    font-size: large;
+    background-color: rgb(102, 102, 191);
+}
+button:hover{
+    background-color: rgb(54, 54, 114);
+}
