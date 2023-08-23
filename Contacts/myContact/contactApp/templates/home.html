@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Contacts</title>
+</head>
+<body>
+    <div class="div">
+        <div class="card">
+            <table>
+            {%for item in contact%}
+            <tr>
+                <td>{{item.name}} </td><td> {{ item.phone_number}}</td>
+            </tr>
+            {%endfor%}
+            </table>
+            <form action="" method = "POST" id="form">
+                {% csrf_token %}
+                <input type="text" name="name" onkeyup ="startSearching()" id="input">
+                <button type="submit">Submit</button> <br>
+                <a href="form/"><button type="button">Enter a Number</button></a>
+            </form>
+            <div id="div"></div>
+        </div>
+    </div>
+    <script> 
+    
+        const input = document.getElementById("input");
+        const div = document.getElementById("div"); 
+        input.focus();
+        input.value=div.innerHTML;
+        function startSearching(){
+            const form = document.getElementById('form');
+            let value = input.value;
+            
+            div.innerHTML = value;
+            form.submit();
+        }
+    </script>
+</body>
+</html>
